@@ -12,9 +12,25 @@ janela.resizable(False,False)
 titulo = ctk.CTkLabel(janela,
                      text='Sistema de Login',
                      font=('verdana',50),
-                     text_color="#23af36",
+                     text_color="#eaebe4",
                      )
 titulo.pack()
 
+login = ctk.CTkEntry(janela,
+                     width=400,
+                     height=40,
+                     placeholder_text='Digite o seu Login',
+                     border_color="#000000")
+login.pack(pady=20)
 
+
+senha = ctk.CTkEntry(janela,
+                     width=400,
+                     height=40,
+                     placeholder_text='Digite a sua senha',
+                     border_color="#000000",
+                     show='*')
+senha.pack()
+
+#--------------------------------------------
 janela.mainloop()
