@@ -5,6 +5,6 @@ janela = gustavo.CTk()
 janela.geometry('600x450')
 janela.title('Hamburgueria do Juan')
 janela.iconbitmap('hamburguer.ico')
-
+janela.resizable(False,False)
 
 janela.mainloop()
