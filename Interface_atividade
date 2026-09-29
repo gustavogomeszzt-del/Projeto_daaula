@@ -1,10 +1,20 @@
-import customtkinter as gustavo
-gustavo.set_appearance_mode('dark')
+import customtkinter as ctk
+ctk.set_appearance_mode('dark')
 
-janela = gustavo.CTk()
+janela = ctk.CTk()
 janela.geometry('600x450')
 janela.title('Hamburgueria do Juan')
 janela.iconbitmap('hamburguer.ico')
 janela.resizable(False,False)
+#----------------------------------------
+
+#Elementos da tela 
+titulo = ctk.CTkLabel(janela,
+                     text='Sistema de Login',
+                     font=('verdana',50),
+                     text_color="#23af36",
+                     )
+titulo.pack()
+
 
 janela.mainloop()
