@@ -1,36 +1,61 @@
-import customtkinter as ctk
-ctk.set_appearance_mode('dark')
+import customtkinter as ctk 
+ctk.set_appearance_mode('Dark')
+
+#Janela -----------------------
 
 janela = ctk.CTk()
-janela.geometry('600x450')
-janela.title('Hamburgueria do Juan')
-janela.iconbitmap('hamburguer.ico')
-janela.resizable(False,False)
-#----------------------------------------
-
-#Elementos da tela 
+janela.geometry('600x400')
+janela.title('Sistema de Calculos')
+#----------------------------------
+#elementos da pagina -----------------
 titulo = ctk.CTkLabel(janela,
-                     text='Sistema de Login',
-                     font=('verdana',50),
-                     text_color="#eaebe4",
-                     )
-titulo.pack()
+                      text='Sistema de Calculos',
+                      font=('Arial,',40),
+                      text_color='yellow')
 
-login = ctk.CTkEntry(janela,
-                     width=400,
-                     height=40,
-                     placeholder_text='Digite o seu Login',
-                     border_color="#000000")
-login.pack(pady=20)
+titulo.pack(pady=10)
+n1 =ctk.CTkEntry(janela,
+                 width=400,
+                 height=40,
+                 placeholder_text='Digite o 1 numero',
+                 border_color='yellow')
+n1.pack(pady=10)
 
 
-senha = ctk.CTkEntry(janela,
-                     width=400,
-                     height=40,
-                     placeholder_text='Digite a sua senha',
-                     border_color="#000000",
-                     show='*')
-senha.pack()
 
-#--------------------------------------------
+n2 =ctk.CTkEntry(janela,
+                 width=400,
+                 height=40,
+                 placeholder_text='Digite o 2 numero',
+                 border_color='yellow')
+n2.pack(pady=10)
+
+botao1 = ctk.CTkButton(janela,
+                       text='soma',
+                       width=150,
+                       height=40,
+                       fg_color='yellow',
+                       text_color='black',
+                       hover_color='orange',
+                       font=('arial',25),
+                       cursor='hand2')
+
+                                                       
+botao1.pack(pady=20)
+ 
+ 
+botao2 = ctk.CTkButton(janela,
+                       text='subtraçao',
+                       width=150,
+                       height=40,
+                       fg_color='yellow',
+                       text_color='black',
+                       hover_color='orange',
+                       font=('arial',25),
+                       cursor='hand2')
+
+botao2.pack(pady=20)
+ 
+
+
 janela.mainloop()
