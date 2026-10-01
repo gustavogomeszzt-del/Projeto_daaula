@@ -1,0 +1,17 @@
+import customtkinter as ctk 
+ctk.set_appearance_mode('Dark')
+#Janela------------------------
+
+janela = ctk.CTk()
+janela.geometry('600x450')
+janela.title('Sistema Escolar')
+#--------------------------------
+titulo = ctk.CTkLabel(janela,
+                       text='Sistema Escolar',
+                      font='Arial, 40',
+                      text_color='yellow',)
+
+titulo.pack(pady=20)
+
+
+janela.mainloop()
