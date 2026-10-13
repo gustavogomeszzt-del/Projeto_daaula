@@ -1,1 +1,72 @@
+import customtkinter as ctk 
+ctk.set_appearance_mode('dark')
+#--------------Janela-------------
+janela = ctk.CTk()
+janela.geometry('600x400')
+janela.title('Brawl Star')
 
+
+def dobro():
+    caixa2 = int(caixa.get())
+    calculo = caixa2*2
+    resultado.configure(text=f'O dobro foi {calculo}')
+    
+def triplo():
+    caixa3 = int(caixa.get())
+    calculo = caixa3*3
+    resultado.configure(text=f'O triplo foi {calculo}')
+    
+#--------Elementos da janela------
+titulo = ctk.CTkLabel(janela,
+                      text='Sistema de Duplicar e Triplicar',
+                      font=('arial',40),
+                      width=100,
+                      height=50,
+                      )
+titulo.pack(pady=10)
+
+#- Elementos dentro da janela--
+caixa = ctk.CTkEntry(janela,
+                          font=('arial',15),
+                          placeholder_text='Digite um numero',
+                          width=300,
+                          height=30,
+                          text_color='yellow',
+                          )
+caixa.pack(pady=10)
+
+#---------------Segundo elemento dentro da janela --
+botao = ctk.CTkButton(janela,
+                      font=('arial',20),
+                      text='Dobrar',
+                      width=150,
+                      height=50,
+                      fg_color='yellow',
+                      text_color='red',
+                      hover_color='blue',
+                      cursor='cross',
+                      command=dobro)
+botao.pack(pady=20)
+
+
+botao2 = ctk.CTkButton(janela,
+                      font=('arial',20),
+                      text='triplicar',
+                      width=150,
+                      height=50,
+                      fg_color='yellow',
+                      text_color='red',
+                      hover_color='blue',
+                      cursor='cross',
+                      command=triplo)
+botao2.pack(pady=20)
+
+resultado = ctk.CTkLabel(janela,
+                         text='',
+                         text_color='yellow',
+                         font=('arial',28))
+
+resultado.pack(pady=10)
+
+#------------------------------------
+janela.mainloop()
