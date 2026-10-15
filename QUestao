@@ -19,3 +19,21 @@ Implemente uma funçao que calcule o valor total de uma compra no supermercado, 
 4)Questão:
 
 Você foi contratado para criar um sistema para uma escola que gerencia informações sobre os alunos, suas notas e suas frequências.A aplicação deverá coletar o nome do aluno, a nota de uma prova e a porcentagem de frequência através de uma interface gráfica criada com CustoTKinter
+
+Com base nesses dados, o sistema deve:
+
+1. Exibir se o aluno foi aprovado ou reprovado na materia.A aprovaçao é dada se a nota for maior ou igual a 7, e a frequência for maior ou igual a 75%.
+
+2.Informar o status do aluno, ou seja, se ele’Aprovado’, ‘Reprovado por nota’ ou ‘Reprovado por frequência’
+
+Para isso,você deverá implementar uma interface gráfica que permita ao usuario inserir o nome do aluno,sua nota e a porcentagem de frequência
+
+
+Requisitos:
+-O nome do aluno será uma string
+-A nota será um numero entre 0 e 10
+-A frequência será um numero entre 0 e 100(representando a porcentagem de presença).
+-Ao clicar no botão’Verificar’,a aplicaçao deve:
+	Exibir a situaçao do aluno com base nos criterios acima
+
+Dica:Utilize funçoes para organizar a lógica de aprovaçao do aluno.O codigo deve ser simples,utilizando a interface gráfica para capturar as entradas e exibindo o resultado de forma clara
