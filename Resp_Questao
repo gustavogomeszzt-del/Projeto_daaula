@@ -1,0 +1,152 @@
+2- def acompanhar_progresso():
+    pesos = []
+    # 2. Recebe e armazena os três pesos em um vetor
+    for i in range(3):
+        peso = float(input(f"Digite o peso do treino {i+1} (em kg): "))
+        pesos.append(peso)
+    
+    # Calcula a média
+    media = sum(pesos) / len(pesos)
+    print(f"\nMédia dos pesos levantados: {media:.2f} kg")
+    
+    # Exibe a mensagem motivacional apropriada
+    if media < 40:
+        print("Continue firme! O importante é a constância!")
+    elif 40 <= media <= 80:
+        print("Ótimo trabalho! Você está evoluindo bem!")
+    else:
+        print("Incrível! Seu desempenho está excelente!")
+
+# 1. Leia o nome do aluno
+nome = input("Digite o nome do aluno: ")
+acompanhar_progresso()
+
+----;;::--::::-------------
+def calcular_total_supermercado():
+    # Solicita a distância de entrega
+    distancia = float(input("Digite a distância de entrega (em km): "))
+    
+    total_produtos = 0
+    print("Digite o preço dos produtos (ou digite 0 para encerrar):")
+    
+    # Loop para somar os produtos até digitar zero
+    while True:
+        preco = float(input("Preço do produto: R$ "))
+        if preco == 0:
+            break
+        total_produtos += preco
+        
+    # Regra de cálculo do frete
+    if distancia <= 50:
+        frete = distancia * 2.00
+    else:
+        frete = distancia * 1.80
+        
+    total_compra = total_produtos + frete
+    
+    print(f"\nTotal em produtos: R$ {total_produtos:.2f}")
+    print(f"Valor do frete: R$ {frete:.2f}")
+    print(f"Valor total da compra (com frete): R$ {total_compra:.2f}")
+
+# Executa a função
+calcular_total_supermercado()
+
+
+--------------------
+
+import customtkinter as ctk
+
+ctk.set_appearance_mode('dark')
+
+def verificar():
+    nome = cx1.get()
+    nota = float(cx2.get())
+    freq = float(cx3.get())
+    
+    if nota >= 7 and freq >= 75:
+        situacao = "Aprovado"
+    elif nota < 7 and freq >= 75:
+        situacao = "Reprovado por nota"
+    elif nota >= 7 and freq < 75:
+        situacao = "Reprovado por frequência"
+    else:
+        situacao = "Reprovado por nota e frequência"
+        
+    resultado.configure(text=f"Aluno: {nome}\nStatus: {situacao}")
+
+#------------- Janela -------------
+janela = ctk.CTk()
+janela.geometry('600x550')
+janela.title('Gerenciamento Escolar')
+janela.resizable(False, False)
+janela.iconbitmap('')
+
+#------ Elementos da Janela ------
+
+titulo = ctk.CTkLabel(
+    janela,
+    width=100,
+    height=80,
+    font=('Arial', 30),
+    text_color="#FFFFFF",
+    text='Sistema Escolar'
+)
+titulo.pack()
+
+cx1 = ctk.CTkEntry(
+    janela,
+    width=400,
+    height=50,
+    font=('Arial', 20),
+    text_color="#FFFFFF",
+    placeholder_text='Digite o nome do aluno'
+)
+cx1.pack(pady=10)
+
+cx2 = ctk.CTkEntry(
+    janela,
+    width=400,
+    height=50,
+    font=('Arial', 20),
+    text_color="#FFFFFF",
+    placeholder_text='Digite a nota da prova (0 a 10)'
+)
+cx2.pack(pady=10)
+
+cx3 = ctk.CTkEntry(
+    janela,
+    width=400,
+    height=50,
+    font=('Arial', 20),
+    text_color="#FFFFFF",
+    placeholder_text='Digite a frequência (0 a 100)'
+)
+cx3.pack(pady=10)
+
+buttom1 = ctk.CTkButton(
+    janela,
+    text='Verificar',
+    width=150,
+    height=50,
+    fg_color="#00DA1D",
+    text_color="#FFFFFF",
+    hover_color="#00A716",
+    font=('Arial', 30),
+    cursor='cross',
+    command=verificar
+)
+buttom1.pack(pady=20)
+
+resultado = ctk.CTkLabel(
+    janela,
+    width=100,
+    height=50,
+    font=('Arial', 22),
+    text_color="#FFFFFF",
+    text=''
+)
+resultado.pack(pady=10)
+
+#----------------------------------
+janela.mainloop()
+
