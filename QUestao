@@ -1,0 +1,21 @@
+2)Questão: Uma academia de musculação deseja implementar um simples sistema para acompanhar o progresso  dos seus alunos. Um aluno deve informar seu nome e o peso que consegue levantar no supino reto(em kg) em três treinos diferentes.O sistema deve calcular a média dos pesos levantados e exibir uma mensagem motivacional baseado no desepenho do aluno
+
+Regras para a mensagem motivacional
+
+Se a média for menor que 40kg,exibir:’Continue firme! o importante é a constância!’
+Se a média entreque 40kg e 80kg(inclusive)exibir:’Òtimo trabalho! você está evoluindo bem!’
+Se a media for maior que 80 kg,exibir:1INcrivel!seu desempenho está excelente!’
+
+Implemente um programa python que:
+1- leia o nome do aluno
+2-Utilize uma funçao para receber e armazenar os três pesos levantados em um vetor, calcular a media dos pesos levantados e exibir mensagem motivacional apropriada
+
+
+3)Questão:Calculo de preço de compra no Supermercado
+
+Implemente uma funçao que calcule o valor total de uma compra no supermercado, o programa deve solicitar a distância de entrega em km, e o preço dos produtos comprados até digitar o preço com o valor zero.O valor do frete é de R$ 2 por km para distâncias ate 50 km, e R$ 1,80 para distâncias acima de 50kmExiba o valor total da compra somado ao frete
+
+
+4)Questão:
+
+Você foi contratado para criar um sistema para uma escola que gerencia informações sobre os alunos, suas notas e suas frequências.A aplicação deverá coletar o nome do aluno, a nota de uma prova e a porcentagem de frequência através de uma interface gráfica criada com CustoTKinter
